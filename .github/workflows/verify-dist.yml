@@ -1,0 +1,25 @@
+name: Verify Dist
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  verify-dist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm install --no-package-lock
+
+      - name: Verify Dist
+        run: npm run verify:dist
