@@ -26,6 +26,25 @@ This repository is intended to stand on its own:
 - publish with `npm publish`
 - or consume it from another project as a normal npm package
 
+## Install From GitHub
+
+The repository includes committed `dist/` output so GitHub dependency installs
+do not need a local build step.
+
+```bash
+npm install github:OpenlabSimon/mail-agent-runtime
+```
+
+Or in `package.json`:
+
+```json
+{
+  "dependencies": {
+    "@openbnb/mail-agent-runtime": "github:OpenlabSimon/mail-agent-runtime"
+  }
+}
+```
+
 ## Example
 
 ```ts
@@ -41,4 +60,5 @@ import {
 
 - The package is framework-agnostic. It does not include the Anthropic agent loop.
 - `DubaiListingsService` is Dubai-specific by design and expects the existing collector schema.
+- `dist/` is checked into git on purpose so GitHub installs can resolve `main` and `types` immediately.
 - License: MIT. See `LICENSE`.
