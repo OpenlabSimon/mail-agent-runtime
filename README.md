@@ -1,5 +1,8 @@
 # @openbnb/mail-agent-runtime
 
+[![Verify Dist](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/verify-dist.yml/badge.svg)](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/verify-dist.yml)
+[![Publish](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/publish.yml/badge.svg)](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/publish.yml)
+
 Reusable mail-agent runtime primitives.
 
 ## What is in this package
