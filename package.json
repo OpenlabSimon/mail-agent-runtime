@@ -1,0 +1,63 @@
+{
+  "name": "@openbnb/mail-agent-runtime",
+  "description": "Reusable mail-agent runtime primitives: transport, approval-gated marketplace state, and Dubai listing search helpers.",
+  "type": "module",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "OpenBnB (https://openbnb.org)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenlabSimon/mail-agent-runtime.git"
+  },
+  "homepage": "https://github.com/OpenlabSimon/mail-agent-runtime",
+  "bugs": {
+    "url": "https://github.com/OpenlabSimon/mail-agent-runtime/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./mail-transport": {
+      "types": "./dist/mail-transport.d.ts",
+      "import": "./dist/mail-transport.js"
+    },
+    "./imap-transport": {
+      "types": "./dist/imap-transport.d.ts",
+      "import": "./dist/imap-transport.js"
+    },
+    "./marketplace-service": {
+      "types": "./dist/marketplace-service.d.ts",
+      "import": "./dist/marketplace-service.js"
+    },
+    "./dubai-listings-service": {
+      "types": "./dist/dubai-listings-service.d.ts",
+      "import": "./dist/dubai-listings-service.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "shx rm -rf dist"
+  },
+  "dependencies": {
+    "imapflow": "^1.3.1",
+    "mailparser": "^3.9.8",
+    "nodemailer": "^8.0.5"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.4.6",
+    "@types/node": "^22.13.9",
+    "@types/nodemailer": "^8.0.0",
+    "shx": "^0.3.4",
+    "typescript": "^5.8.2"
+  }
+}
