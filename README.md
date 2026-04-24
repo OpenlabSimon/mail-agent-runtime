@@ -1,7 +1,6 @@
 # @openbnb/mail-agent-runtime
 
 [![Verify Dist](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/verify-dist.yml/badge.svg)](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/verify-dist.yml)
-[![Publish](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/publish.yml/badge.svg)](https://github.com/OpenlabSimon/mail-agent-runtime/actions/workflows/publish.yml)
 
 Reusable mail-agent runtime primitives.
 
@@ -21,13 +20,13 @@ npm run build
 
 Build output goes to `dist/`.
 
-## Publish or copy
+## Reuse
 
 This repository is intended to stand on its own:
 
 - run `npm install && npm run build`
-- publish with `npm publish`
-- or consume it from another project as a normal npm package
+- keep `dist/` committed so GitHub installs work without a local build
+- consume it from another project through GitHub
 
 ## Install From GitHub
 
@@ -64,4 +63,5 @@ import {
 - The package is framework-agnostic. It does not include the Anthropic agent loop.
 - `DubaiListingsService` is Dubai-specific by design and expects the existing collector schema.
 - `dist/` is checked into git on purpose so GitHub installs can resolve `main` and `types` immediately.
+- CI only verifies `src` and committed `dist` stay in sync. npm publishing is intentionally not configured.
 - License: MIT. See `LICENSE`.
